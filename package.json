@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/mypttwo/trisul-server/issues"
   },
-  "homepage": "https://github.com/mypttwo/trisul-server#readme"
+  "homepage": "https://github.com/mypttwo/trisul-server#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.3.1"
+  }
 }
