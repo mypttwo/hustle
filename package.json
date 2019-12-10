@@ -1,0 +1,19 @@
+{
+  "name": "hustle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mypttwo/trisul-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mypttwo/trisul-server/issues"
+  },
+  "homepage": "https://github.com/mypttwo/trisul-server#readme"
+}
