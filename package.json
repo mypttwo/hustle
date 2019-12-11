@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mypttwo/trisul-server.git"
+    "url": "git+https://github.com/mypttwo/hustle.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mypttwo/trisul-server/issues"
+    "url": "https://github.com/mypttwo/hustle/issues"
   },
-  "homepage": "https://github.com/mypttwo/trisul-server#readme",
+  "homepage": "https://github.com/mypttwo/hustle#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "winston": "^3.2.1",
