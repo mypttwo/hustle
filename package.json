@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/mypttwo/hustle#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "mongoose": "^5.8.0",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.3.1"
