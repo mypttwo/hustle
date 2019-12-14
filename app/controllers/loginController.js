@@ -14,22 +14,21 @@ router.use(bodyParser.urlencoded({extended : true}));
 
 router.post('',(req, res) => {
     if(!req.body.email){
-        return res.status(405).send('email');
+        return res.status(405).send('You need an email to login!');
     }
     if(!req.body.password){
-        return res.status(405).send('password');
+        return res.status(405).send('You need a password to login!');
     }
 
     User.findOne({email : req.body.email}).then((data) => {
         if(bcrypt.compareSync(req.body.password, data.password)){
             const authToken = generateAuthToken(data._id);
-            res.status(200).send({auth : true, authToken, userDbId : data._id});
+            return res.status(200).send({authToken, userDbId : data._id});
         }
-        return res.status(403).send({auth : false, message : 'Bad password'});
+        return res.status(403).send('Bad password');
     }).catch((err) => {
-        return res.status(500).send({auth : false, message : 'Internal Error'});
-    })
-
+        return res.status(500).send('Internal Error');
+    })    
 })
 
 module.exports = router;
