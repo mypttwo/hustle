@@ -1,7 +1,7 @@
 'use strict'
 
 const logg = require('./log');
-const server = require('./server');
+const server = require('./server/server');
 const {port, dbConnStr} = require('./config');
 
 const {mongoose, connectToDB} = require('./db');
