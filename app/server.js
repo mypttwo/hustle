@@ -23,6 +23,15 @@ express.use('/register', userRegistrationController);
 
 express.use('/proxybinance', proxy('https://api.binance.com'));
 
+express.use('/proxypoloniex', proxy('https://poloniex.com/public', {
+    proxyReqPathResolver: req => {
+      let parts = req.url.split('?');
+      let queryString = parts[1];
+      let updatedPath = 'https://poloniex.com/public';
+      return updatedPath + (queryString ? '?' + queryString : '');
+    }
+  }));
+
 const server = http.createServer(express);
 
 module.exports = server;
