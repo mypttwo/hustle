@@ -1,0 +1,13 @@
+[{ 
+    "name": "MyExchange",
+    "key": "myExchange",
+    "url": "http:myExchange.com"
+},{ 
+    "name": "MyExchange2",
+    "key": "myExchange2",
+    "url": "http:myExchange2.com"
+},{ 
+    "name": "MyExchange3",
+    "key": "myExchange3",
+    "url": "http:myExchange3.com"
+}]
