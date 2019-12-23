@@ -1,13 +1,17 @@
 [{ 
-    "name": "MyExchange",
-    "key": "myExchange",
-    "url": "http:myExchange.com"
+    "name": "Binance",
+    "key": "binance",
+    "url": "https://www.binance.com"
 },{ 
-    "name": "MyExchange2",
-    "key": "myExchange2",
-    "url": "http:myExchange2.com"
+    "name": "Poloniex",
+    "key": "poloniex",
+    "url": "https://www-poloniex.net/"
 },{ 
-    "name": "MyExchange3",
-    "key": "myExchange3",
-    "url": "http:myExchange3.com"
+    "name": "P2Pb2b",
+    "key": "p2pb2b",
+    "url": "https://p2pb2b.io/"
+},{ 
+    "name": "Cointiger",
+    "key": "cointiger",
+    "url": "https://www.cointiger.com/"
 }]
