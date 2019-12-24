@@ -14,4 +14,20 @@
     "name": "Cointiger",
     "key": "cointiger",
     "url": "https://www.cointiger.com/"
+},{ 
+    "name": "SomeBs",
+    "key": "bs",
+    "url": "https://www.bs.com/"
+},{ 
+    "name": "SomeBs2",
+    "key": "bs2",
+    "url": "https://www.b2s.com/"
+},{ 
+    "name": "SomeB3s",
+    "key": "b3s",
+    "url": "https://www.b3s.com/"
+},{ 
+    "name": "SomeBs44",
+    "key": "bs4",
+    "url": "https://www.b4s.com/"
 }]

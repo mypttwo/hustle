@@ -8,6 +8,8 @@ const cors = require('cors')();
 const logg = require('../log');
 const loginController = require('../controllers/loginController');
 const userRegistrationController = require('../controllers/userRegistrationController');
+const exchangeController = require('../controllers/exchangeController');
+
 const proxySetup = require('./proxySetup');
 
 express.use(cors);
@@ -20,6 +22,7 @@ express.use((req, res, next) => {
 express.get('/', (req, res) => res.send('You need a drink!'));
 express.use('/login', loginController);
 express.use('/register', userRegistrationController);
+express.use('/exchange', exchangeController);
 
 proxySetup(express);
 
