@@ -14,17 +14,20 @@ const generateAuthToken = (userDbId) => {
 const verifyAuthToken = (req, res, next) => {
     let authToken = req.headers['x-access-token'];
     if(!authToken){
-        logg.error(`AuthToken was expected but not found in header of req : ${req.method} ${req.path}`);
-        return;
+        logg.error('authToken is not avilable in request');
+        return res.status(403).send('authToken is not avilable in request');
     }
 
     jwt.verify(authToken, secret, (error, data) => {
         if(error){
-            logg.error(`Could not verify authToken ${authToken} due to error ${error}`);
-            return;
+            logg.error('authToken is not valid');
+            return res.status(403).send('authToken is not valid');
         }
-        logg.info(`AuthToken verified for token ${authToken}`);
-        req.userDbId = data.userDbId;
+        logg.info(`authToken verified for token ${authToken}`);
+        if(req.query.id != data.userDbId){
+            logg.error(`req user ${req.query.id} authToken is for a different user ${data.userDbId}`);
+            return res.status(403).send('authToken is not valid');
+        }
         next();
     })
 }
