@@ -4,6 +4,11 @@ const validator = require('validator');
 
 const mongoose = require('../db').mongoose;
 
+const trackedExchangeSchema = new mongoose.Schema({
+    exchangeKey : {
+        type : String
+    }
+})
 
 const userSchema = new mongoose.Schema({
     email : {
@@ -18,7 +23,8 @@ const userSchema = new mongoose.Schema({
         validate : (value) => {
             //password policy here
         }
-    } 
+    },
+    trackedExchanges : [trackedExchangeSchema]
 })
 
 module.exports = mongoose.model('User', userSchema);
