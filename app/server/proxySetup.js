@@ -15,6 +15,10 @@ const proxySetup = (express) => {
         }
     }));
 
+    express.use('/proxyp2pb2b', proxy('https://api.p2pb2b.io/')); 
+
+    express.use('/proxycointiger', proxy('https://www.cointiger.com/'));
+
 }
 
 module.exports = proxySetup;
