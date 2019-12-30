@@ -19,6 +19,17 @@ const proxySetup = (express) => {
 
     express.use('/proxycointiger', proxy('https://www.cointiger.com/'));
 
+    express.use('/proxybibox', proxy('https://api.bibox.com/v1/mdata',{
+        proxyReqPathResolver: req => {
+            console.log(req.url);
+            
+            let parts = req.url.split('?');
+            let queryString = parts[1];
+            let updatedPath = 'https://api.bibox.com/v1/mdata';
+            return updatedPath + (queryString ? '?' + queryString : '');
+        }        
+    }));
+
 }
 
 module.exports = proxySetup;
