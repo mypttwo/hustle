@@ -15,6 +15,10 @@
     "key": "bibox",
     "url": "https://www.bibox.com"
 },{ 
+    "name": "Digifinex",
+    "key": "digifinex",
+    "url": "https://www.digifinex.com/"
+},{ 
     "name": "P2Pb2b",
     "key": "p2pb2b",
     "url": "https://p2pb2b.io/"

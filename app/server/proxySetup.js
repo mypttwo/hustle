@@ -21,14 +21,22 @@ const proxySetup = (express) => {
 
     express.use('/proxybibox', proxy('https://api.bibox.com/v1/mdata',{
         proxyReqPathResolver: req => {
-            console.log(req.url);
-            
             let parts = req.url.split('?');
             let queryString = parts[1];
             let updatedPath = 'https://api.bibox.com/v1/mdata';
             return updatedPath + (queryString ? '?' + queryString : '');
         }        
     }));
+
+    express.use('/proxydigifinex', proxy('https://openapi.digifinex.com/v3/ticker',{
+        proxyReqPathResolver: req => {
+            let parts = req.url.split('?');
+            let queryString = parts[1];
+            let updatedPath = 'https://openapi.digifinex.com/v3/ticker';
+            return updatedPath + (queryString ? '?' + queryString : '');
+        }        
+    }));
+    
 
 }
 
