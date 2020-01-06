@@ -22,7 +22,10 @@ router.post('/trackedexchanges', verifyAuthToken,(req, res) => {
         }
         user.trackedExchanges = [];
         req.body.map((exchange) => {
-            user.trackedExchanges.push({exchangeKey : exchange});
+            user.trackedExchanges.push({
+                exchangeKey : exchange.exchangeKey,
+                currencyMarketPairs : exchange.currencyMarketPairs
+            });
         })
         user.save().then((data) => {
             logg.info(`${data}`);
