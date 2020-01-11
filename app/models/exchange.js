@@ -17,6 +17,10 @@ const exchangeSchema = new mongoose.Schema({
     },
     url : {
         type : String
+    },
+    websocketEnabled : {
+        type : Boolean,
+        default : true
     }
 })
 
