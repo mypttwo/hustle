@@ -21,6 +21,10 @@ const exchangeSchema = new mongoose.Schema({
     websocketEnabled : {
         type : Boolean,
         default : true
+    },
+    apiEnabled : {
+        type : Boolean,
+        default : true
     }
 })
 
